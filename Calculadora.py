@@ -12,11 +12,9 @@ class CalculadoraComum(object):
 		self.DentroDaJanela = Label(self.Janela, text="Calculadora", font= "arial, 15", background='red') 
 		self.DentroDaJanela.place( x= 210, y= 20)
 
-                #Entrada(1,2) sao os campos brancos onde serao digitado os numeros
 		self.Entrada1 = []
 		self.Entrada2 = []
 
-                #Focador1 é a borda vermelha que fica em torno da entrada(1,2)
 		self.Focador1 = Label(self.Janela, width = 35, height= 2, bg = 'red')
 		self.Focador1.place(x= 108, y= 67)
 
