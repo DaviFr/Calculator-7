@@ -1,4 +1,4 @@
-from tkinter import *
+"""from tkinter import *
 
 #usuario = str(input("digite o nome do user: "))
 #senha = input("digite sua senha: ")
@@ -71,4 +71,24 @@ entrada_pass = Entry(cadastro,width=20,).grid(row=3,column=2)
 #print(lista_senha)
 #login()
 
-cadastro.mainloop()
+cadastro.mainloop()"""
+
+import sqlite3
+
+conectar = sqlite3.connect('cadastro.db')
+c = conectar.cursor()
+
+def criar_db():
+    c.execute('CREATE TABLE cadastro (usuario text, senha text)')
+
+try:
+    criar_db()
+except:
+    print("Error ao criar o banco de dados")
+else:
+    print("banco de dados criado com sucesso!")
+
+
+
+
+
