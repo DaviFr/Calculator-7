@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 
+
 class CauculadoraComum(object):
 	def __init__(self):
 		self.Janela = Tk()
