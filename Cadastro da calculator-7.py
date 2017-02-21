@@ -1,8 +1,9 @@
-usuario = str(input("digite o nome do user: "))
-senha = input("digite sua senha: ")
-lista_user = ["andre","lucas","bale"]
-lista_senha = ["ifall","ufall","balle"]
+from tkinter import *
 
+#usuario = str(input("digite o nome do user: "))
+#senha = input("digite sua senha: ")
+#lista_user = ["andre","lucas","bale"]
+#lista_senha = ["ifall","ufall","balle"]
     
 def cadastro_user(usuario):
     while len(usuario) < 5:
@@ -47,9 +48,27 @@ def login():
                 else:
                     print("senha invalida")
             a+=1
+
+cadastro = Tk()
+cadastro.title("Cadastro")
+cadastro.resizable(False,False)
+cadastro.geometry("250x250")
+
+lb = Label(cadastro,text="Usuario e Senha").grid(row=1,column=1,columnspan=2,pady=4)
+
+lb1 = Label(cadastro, text="Usuario")
+lb1.grid(row=2,column=1,pady=4)
+lb2 = Label(cadastro, text="Senha")
+lb2.grid(row=3,column=1,pady=4)
+
+entrada_user = Entry(cadastro,width=20,).grid(row=2,column=2)
+entrada_pass = Entry(cadastro,width=20,).grid(row=3,column=2)
+
         
-cadastro_user(usuario)
-cadastro_pass(senha)
+#cadastro_user(usuario)
+#cadastro_pass(senha)
 #print(lista_user)
 #print(lista_senha)
-login()
+#login()
+
+cadastro.mainloop()
